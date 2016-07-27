@@ -33,7 +33,7 @@ if(isset($_POST['send'])){
   $data['message'] = $message;
 
   $query = $db->query("INSERT INTO chats (sender, receiver, message) VALUES (1, 3, '$message')");
-//if($querys){
+//if($queryss){
 	
   $pusher->trigger('chats', 'chat_event', $data);
   echo $data['message']."<hr/>";
